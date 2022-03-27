@@ -19,3 +19,25 @@ int main(){
 	cout<<("PETAMINA\n");
 	cout<<"SPBU 46.257.123\nJln. Jagakarsa 181B, Jakarta Selatan\nTlp. 080020066700\n"<<endl;
 	cout<<endl;
+		cout<<"--------------------------------\n"<<endl;{
+		if (bbm.n == 1){
+			bbm.hasil = 9000*bbm.liter;
+			cout<<"Jenis BBM     : Pertamax\n";
+		}
+		else
+		if (bbm.n == 2){
+			bbm.hasil = 7000*bbm.liter;
+			cout<<"Jenis BBM    : Pertalite\n";
+		}
+		else
+		if (bbm.n == 3){
+			bbm.hasil = 6500*bbm.liter;
+			cout<<"Jenis BBM   : Bio Solar\n";
+		}
+	}
+	cout<<"Nama Pelanggan : "<<bbm.nama<<endl;
+	cout<<"Liter          : "<<bbm.liter<<endl;
+	cout<<"Harga/Liter     : Rp. "<<bbm.hasil / bbm.liter<<endl;
+	cout<<"Total          : Rp. "<<bbm.hasil<<endl;
+	cout<<"================================\n"<<endl;
+}
