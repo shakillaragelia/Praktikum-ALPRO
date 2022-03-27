@@ -1,0 +1,21 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+struct penjualan{
+	string nama;
+	float liter;
+	float hasil;
+	int n;
+} bbm;
+int main(){
+	cout<<"DAFTAR TARIF SPBU\n"<<endl;
+	cout<<" 1.Pertamax\n 2.Peralite\n 3.Bio Solar\n"<<endl;
+	cout<<"Masukkan pilihan :";
+	scanf ("%d", &bbm.n);
+	cout<<"LITER : "<<endl;
+	scanf ("%f", &bbm.liter);
+	cout<<"Masukkan nama pelanggan :";
+	cin>>bbm.nama;
+	cout<<("PETAMINA\n");
+	cout<<"SPBU 46.257.123\nJln. Jagakarsa 181B, Jakarta Selatan\nTlp. 080020066700\n"<<endl;
+	cout<<endl;
