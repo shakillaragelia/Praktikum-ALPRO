@@ -60,3 +60,64 @@ case 4:
                 cout<<"Total harga= Rp."<<total<<endl;
                 cout<<"Dibayar= Rp."; cin>>bayar; kembali=bayar-total;
                 cout<<"Kembali= Rp."<<kembali<<endl;
+cout <<"======================================="<< endl;
+cout <<" Terima kasih atas kunjungan Anda  "<< endl;
+cout <<"======================================="<< endl;
+                break;
+case 5:
+                cout <<"Ayam Bakar"<<endl;
+                harga=25000;
+                cout <<"Masukkan jumlah="; cin >>jm; total=harga*jm;
+                cout <<"Total harga= Rp."<<total<<endl;
+                cout <<"Dibayar= Rp."; cin>>bayar; kembali=bayar-total;
+                cout <<"Kembali= Rp."<<kembali<<endl;
+cout<<"========================================"<< endl;
+cout <<" Terima kasih atas kunjungan Anda  "<< endl;
+cout <<"======================================="<< endl;   
+                break;
+}
+cout<<"========================================\n"<<endl;
+cout<<"Masukkan Jarak tempuh (KM) : "; cin>>jarak;
+if(jarak <= 3) {
+		cout <<"Biaya Ongkir dikenakan sebanyak Rp.15,000" <<endl;
+		ongkir = 15000;
+	} else if(jarak >= 3) {
+		cout <<"Biaya Ongkir dikenakan sebanyak Rp.25,000" <<endl;
+		ongkir = 25000;
+	} 
+	if(total > 25000 && total <= 50000 ){
+		cout <<"Mendapatkan Potongan Ongkir Rp.3000\n";
+		potkir = ongkir - 3000;
+		diskon = 0 * total;
+	} else if(total > 50000 && total <= 150000) {
+		cout <<"\nMendapatkan Potongan ongkir Rp.5000 dan diskon 15% \n";
+		potkir = ongkir - 5000;
+		diskon = 0.15 * total;
+	} else if(total > 150000) {
+		cout <<"\nMendapatkan Potongan ongkir Rp.8000 dan diskon 35% \n";
+		potkir = ongkir - 8000;
+		diskon = 0.35 * total;
+	} else {
+		cout << "\nTidak mendapat potongan";
+	}
+	cout <<"\nJumlah Bayar : Rp." <<total <<endl;
+	cout <<"Jarak tempuh : " <<jarak <<" KM." <<endl;
+	cout <<"Total Ongkir : Rp." <<potkir <<endl;
+	cout <<"Diskon       : Rp." <<diskon <<endl; 
+	cout <<"Total Bayar  : Rp." <<total - diskon + potkir <<endl<<endl;
+	cout << "----------------------------------- \n";
+	cout <<"Bayar        : Rp.";
+	cin >> bayar; 
+	cout <<"Kembali      : Rp.";
+	cout <<(bayar - (total - diskon + potkir)) <<endl;
+	cout << "------------------------------------\n";
+	cout<<"Apakah ada pesanan lagi? (y/n)";
+	cin>>tambah;
+    if (tambah =='y'){
+    cout<<"Pesanan mu telah selesai ";
+    	system("cls");
+    	goto x;
+	}else(tambah =='n');{
+		exit(0);
+	}
+}
