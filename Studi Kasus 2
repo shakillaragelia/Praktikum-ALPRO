@@ -23,7 +23,7 @@ switch (code){
 case 1:
                 cout<<"Ayam Geprek"<<endl;
                 harga=21000;
-                cout<<"Masukkan jumlah"; cin >>jm; total=harga*jm;
+                cout<<"Masukkan jumlah"; cin>>jm; total=harga*jm;
                 cout<<"Total harga= Rp."<<total<<endl;
                 cout<<"Dibayar= Rp."; cin>>bayar;  kembali=bayar-total;
                 cout<<"Kembali= Rp."<<kembali<<endl;
@@ -45,18 +45,18 @@ cout <<"======================================="<< endl;
 case 3:
                 cout <<"Udang Goreng"<<endl;
                 harga=19000;
-                cout <<"Masukkan jumlah ="; cin >>jm; total=harga*jm;
-                cout <<"Total harga= Rp."<<total<<endl;
-                cout <<"Dibayar= Rp."; cin>>bayar; kembali=bayar-total;
-                cout <<"Kembali= Rp."<<kembali<<endl;
-cout <<"======================================="<< endl;
-cout <<" Terima kasih atas kunjungan Anda  "<< endl;
-cout <<"======================================="<< endl;
+                cout<<"Masukkan jumlah ="; cin >>jm; total=harga*jm;
+                cout<<"Total harga= Rp."<<total<<endl;
+                cout<<"Dibayar= Rp."; cin>>bayar; kembali=bayar-total;
+                cout<<"Kembali= Rp."<<kembali<<endl;
+cout<<"======================================="<<endl;
+cout<<" Terima kasih atas kunjungan Anda  "<<endl;
+cout<<"======================================="<<endl;
                 break;
 case 4:
-                cout <<"Cumi Goreng"<<endl;
+                cout<<"Cumi Goreng"<<endl;
                 harga=20000;
-                cout <<"Masukkan jumlah : "; cin >>jm; total=harga*jm;
-                cout <<"Total harga= Rp."<<total<<endl;
-                cout <<"Dibayar= Rp."; cin>>bayar; kembali=bayar-total;
-                cout <<"Kembali= Rp."<<kembali<<endl;
+                cout<<"Masukkan jumlah : "; cin >>jm; total=harga*jm;
+                cout<<"Total harga= Rp."<<total<<endl;
+                cout<<"Dibayar= Rp."; cin>>bayar; kembali=bayar-total;
+                cout<<"Kembali= Rp."<<kembali<<endl;
