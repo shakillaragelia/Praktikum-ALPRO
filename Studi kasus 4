@@ -20,3 +20,29 @@ long Fibonacci::fibon(int n){
 }
 }
 
+
+long Fibonacci::fibonn(int n)
+{
+	if((n==0)|| (n==1)){
+		return (1);
+	}
+	else{
+		return(fibonn(n-1) + fibonn(n-2));
+	}
+
+}
+int main(){
+	
+	int n=11;
+	long hasil;
+
+	Fibonacci run;
+	run.fibon(n);
+	cout<<endl;
+
+	for(int i=1; i<n; i++){
+	cout<<run.fibonn(i)<<" ";
+}
+	
+	return 0;
+}
