@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+class sks { //untuk merepresentasikan anggota data dan prosedur yang di representasikan
+public: //untuk mendefinisikan anggota yang berada dilingkungan publik tersebut yang dapat diakses diluar class
+  void proses();
+  void output();
+  int nim;
+  char nama[50];
+
+private://untuk mendefinisikan anggota yang berada dilingkungan private tersebut yang hanya dapat diakses oleh class
+  int hrg = 120000, sks[20], a, i;
+  char mk[20][10];
+  float tot, subtot, tot1, tot2, m, n;
+}sk;
+
+void sks::proses() { // wadah untuk mendefinisikan bagian dari class proses
+  cout << "masukkan jumlah mata kuliah : ";
+  cin >> a;
+  cout << endl;
+  for (int i = 0; i < a; i++) { // iteratif
+    cout << "masukkan MK  : ";
+    cin>>mk[i]; //inputan mk akan ditampung ke variabel i
+    cout << "masukkan sks : ";
+    cin >> sks[i]; //inputan sks akan ditampung ke variabel i
+    tot += sks[i]; //menambahkan seluruh jumlah sks yang diinput
+    subtot = tot * 120000; //menghitung total harga sks yang telah diinputkan
+    m = subtot * 0.1; //menghitung harga diskon sks jika diberi diskon 10%
+    tot1 = subtot - m; //menghitung harga sks yang telah diberi diskon
+    n = tot1 * 0.05; //menghitung harga sks yang jika diberi diskon 10% dan 5%
+    tot2 = tot1 - n; //menghitung harga total sks yang telah kena diskon 10%dan 5%
+    cout << endl;
+  }
+}
