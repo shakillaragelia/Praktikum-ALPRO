@@ -28,3 +28,42 @@ void Nilai::input() {
 }
   cout<<"----------------------------------------"<<endl;
 }
+
+void Nilai::proses(){
+  nilai_maks = nilai[0];
+  nilai_min = nilai[0];
+  for(int a = 0; a < n; a++){
+    if(nilai_min > nilai[a]){
+      nilai_min = nilai[a];}
+    if(nilai_maks < nilai[a]){
+      nilai_maks = nilai[a];}
+    }
+  for(int i=0; i<n; i++){
+		rata2+=nilai[i];
+	}
+	rata2/=n;
+}
+
+void Nilai::output(){
+  cout << "=======================================" << endl;
+  cout << "|  Hasil Penginputan Nilai Dari dosen |" << endl;
+  cout << "=======================================" << endl;
+  cout<<"Mata kuliah : "<<mk <<endl;
+  cout<<"Nama dosen  : "<<dosen <<endl;
+  cout<<"========================================="<<endl;
+  cout<<"Hasil input nilai mahasiswa : "<<endl;
+  for(int a = 0; a < n; a++){
+    cout<<"- "<<nilai[a]<<endl;
+  }//menampilkan nilai mahasiswa
+  cout<<"Nilai Maksimal   : "<<nilai_maks<<endl;
+  cout<<"Nilai Minimal    : "<<nilai_min<<endl;
+  cout<<"Nilai rata-rata  : "<<rata2<<endl;
+}
+
+int main(){
+  Nilai x; 
+  x.input();
+  x.proses();
+  x.output();
+  return 0;
+}
