@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+class Nilai{
+public :
+  void input();
+  void output();
+  void proses();
+private :
+  string dosen, mk;
+  int n, nilai_maks, nilai_min, jum,i;
+  int nilai[100];
+  float rata2 = 0;
+};
+void Nilai::input() {
+  cout << "=======================================" << endl;
+  cout << "|     Penginputan Nilai Dari dosen     |" << endl;
+  cout << "=======================================" << endl;
+  cout << "Masukkan Nama Mata Kuliah : ";
+  getline(cin, mk);
+  cout << "Masukkan Nama Dosen       : ";
+  getline(cin, dosen);
+  cout<<"Berapa mahasiswa yang ingin anda input? : ";
+  cin>>n;
+  for (int i = 0; i < n; i++) {
+    cout << "Nilai Mahasiswa ke –  " << i + 1 << ": ";
+    cin >> nilai[i]; 
+}
+  cout<<"----------------------------------------"<<endl;
+}
