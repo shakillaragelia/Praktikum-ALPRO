@@ -1,0 +1,81 @@
+#include <iostream>
+using namespace std;
+class mhs {
+public:
+  void menu();
+  void add();
+  void scr();
+  void cek(int);
+  void sort();
+
+private:
+  int pilih, x, simpan_data, cari;
+  int jumlah_data = 0;
+  int nim[15];
+  string nama[50];
+  string prodi[50];
+  string hp[12];
+};
+
+void mhs::menu() {
+mulai: 
+  cout<<" PILIH MENU DIBAWAH INI     "<<endl;
+  cout<<" 1. Masukkan data           "<<endl;
+  cout<<" 2. Cek data                "<<endl;
+  cout<<" 3. Cari data               "<<endl;
+  cout<<" 4. Urutkan data            "<<endl;
+  cout<<" 5. selesai                 "<<endl;
+  cout<<"============================="<<endl;
+  cout<<"Pilih Menu : "; cin>>pilih;
+  cout<<endl<<endl;
+  switch (pilih) {
+  case 1: 
+    add();
+    goto mulai;
+    break;
+  case 2:
+    cek(jumlah_data);
+    goto mulai;
+    break;
+  case 3:
+    scr();
+    goto mulai;
+    break;
+  case 4:     
+    cout<<"1. descending\n"; cin>>x;
+    cout<<endl;
+    sort();
+    goto mulai;
+    break;
+  case 5:
+    system("clear");
+    cout<<"anda telah keluar";
+    cout<<endl; 
+    break;
+  default: 
+    cout<<"Data yang anda masukkan salah, silahkan coba lagi";
+    cout<<endl;
+    goto mulai;
+    cout<<endl;
+    break;
+  }
+  cout<<endl;
+}
+
+void mhs::add() {
+  if (pilih == 1) {
+    cout<<"Masukkan data mahasiswa"<<endl;
+    cout<<"Masukkan NIM Mahasiswa : "; cin>>nim[jumlah_data];
+    cout<<"Masukkan Nama Mahasiswa : "; cin.ignore();
+    getline(cin, (nama[jumlah_data]));
+    cout<<"Masukkan Prodi Mahasiswa : "; 
+    getline(cin, (prodi[jumlah_data]));
+    cout<<"Masukkan No HP Mahasiswa : "; cin>>hp[jumlah_data];
+    cout<<endl; 
+
+    jumlah_data += 1; 
+    simpan_data = jumlah_data;
+    cout<<"Data tersimpan";
+    cout<<endl<<endl;
+  }
+}
