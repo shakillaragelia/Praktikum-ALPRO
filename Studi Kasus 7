@@ -33,6 +33,107 @@ mulai:
     add();
     goto mulai;
     break;
+    
+    void mhs::cek(int jumlah_data) {
+  if (jumlah_data == 0) {
+    cout<<"Data masih kosong\n";
+    cout<<"silahkan mengisi data";
+    menu();
+    cout<<endl;
+  } else {
+    cout<<"No.\t";
+    cout<<"Nim\t\t";
+    cout<<"Nama\t\t\t";
+    cout<<"Prodi\t\t\t";
+    cout<<"\tNo HP"<<endl<<endl;
+
+    for (int i = 0; i < jumlah_data; i++) {
+      cout<<i<<"\t";
+      cout<<nim[i]<<"\t";
+      cout<<nama[i]<<" ";
+      cout<<prodi[i]<<"\t\t";
+      cout<<hp[i]<<endl<<endl;
+    }
+  }
+}
+
+void mhs::scr() {
+  if (jumlah_data == 0) {
+    cout<<"Data belum dimasukkan\n";
+    cout<<"Silahkan mengisi data";
+    menu();
+    cout<<endl;
+  } else if (pilih == 3) {
+    cout<<"Masukkan data yang ingin di cari : ";
+    cin>>cari;
+    cout<<"ID\t";
+    cout<<"Nim\t\t";
+    cout<<"Nama\t\t\t";
+    cout<<"Prodi\t\t\t";
+    cout<<"\tNo HP" << endl;
+    for (int i = 0; i < jumlah_data; i++) {
+      if (nim[i] == nim[cari]) {
+        cout<<cari << "\t";
+        cout<<nim[cari] << "\t";
+        cout<<nama[cari] << " ";
+        cout<<prodi[cari] << "\t\t";
+        cout<<hp[cari] << endl << endl;
+      }
+    }
+  } else {
+    cout<<"Data tidak di temukan!";
+    cout<<endl;
+  }
+}
+void mhs ::sort() {
+       int i, j, tmp;
+       if (x == 1) {
+       for (i = 1; i <= jumlah_data; i++) {
+       for (j = i; j <= jumlah_data; j++) {
+        if (nim[i] > nim[j]) {
+          tmp = nim[j];
+          nim[j] = nim[i];
+          nim[i] = tmp;
+        }
+      }
+    }
+      for (i = 0; i <= jumlah_data; i++) {
+      cout<<i<<"\t";
+      cout<<nim[i]<<"\t";
+      cout<<nama[i]<<"\t\t";
+      cout<<prodi[i]<<"\t\t";
+      cout<<hp[i]<<"\n\n";
+    }
+  } else if (x == 2) {
+    for (i = 0; i <= jumlah_data; i++) {
+      for (j = i; j <= jumlah_data; j++) {
+        if (nim[i] < nim[j]) {
+          tmp = nim[j];
+          nim[j] = nim[i];
+          nim[i] = tmp;
+        }
+      } 
+    }
+    for (int i = 0; i < jumlah_data; i++) {
+      cout<<i<<"\t";
+      cout<<nim[i]<<"\t";
+      cout << nama[i] <<"\t\t";
+      cout<<prodi[i]<< "\t\t";
+      cout<<hp[i]<<"\n\n";
+    }
+  }
+}
+
+int main() {
+  int jumlah_data;
+  mhs x;
+  x.menu();
+  x.add();
+  x.cek(jumlah_data);
+  x.scr();
+  x.sort();
+  return 0;
+}
   case 2:
     cek(jumlah_data);
     goto mulai;
