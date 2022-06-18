@@ -52,3 +52,32 @@ void matriks::proses(){
   
 }
 }
+void matriks::hasil(){
+  int k,j=1; //bagian pentotalan
+  for(k=0;k<3; k++){
+   C[k]=B[k][j]+B[k][j+1]; 
+  }
+  total=C[0]+C[1]+C[2];
+  cout<<"===================================="<<endl;
+  cout<<" Jumlah yang lulus: "<<total<<endl;
+}
+
+  istream& operator>>(istream& in, matriks& A){
+  cout <<"-------------------------------------\n";
+  cout <<"|        MASUKKAN DATA MATRIKS       |\n";
+  cout <<"-------------------------------------\n";
+  cout<<endl;
+  A.input();
+  cout<<"================================="<<endl;
+  cout<<"Jurusan   |  Angkatan |   Lulus |"<<endl;
+  cout<<"================================="<<endl;
+  A.proses();
+  A.hasil();
+  return in;
+}
+	
+int main(){
+  matriks kurama ;
+  cin>>kurama;
+  return 0;
+}
